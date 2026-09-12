@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header-text">
+            <h1>The QR Code Generator (QRCG)</h1>
+
+            <p>
+                A free tool to create QR codes for URLs, text, Wi-Fi,
+                emails, and more – fast, simple, and secure.
+            </p>
+        </header>
+
+
+        <!-- Main Card -->
+        <main class="main-bg">
+
+            <!-- Left Section -->
+            <section class="left-section">
+
+                <!-- Icon Navigation -->
+                <div class="icon-bar">
+
+                    <span class="active">
+                        <i class="fa-solid fa-link"></i>
+                        <p>URL</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-file-lines"></i>
+                        <p>Text</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>Email</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Phone</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-message"></i>
+                        <p>SMS</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-wifi"></i>
+                        <p>Wi-Fi</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>WhatsApp</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-telegram"></i>
+                        <p>Telegram</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Facebook</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>Instagram</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-youtube"></i>
+                        <p>YouTube</p>
+                    </span>
+
+                </div>
+
+
+                <!-- Input Section -->
+                <div class="input-section">
+
+                    <h2>Paste or type your URL</h2>
+
+                    <div class="input-box">
+                        <input type="text" id="urlInput" placeholder="https://example.com">
+
+                        <button onclick="generateQR()">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="terms">
+                        <i class="fa-solid fa-link"></i>
+                        <p>
+                            By continuing, you agree to our
+                            <u>Terms of Service</u> and <u>Privacy Policy</u>.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Bottom Options -->
+                <div class="bottom-options">
+
+                    <label class="toggle-container">
+                        <input type="checkbox">
+                        <span class="toggle"></span>
+                        Track scans
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <label class="toggle-container">
+                        <input type="checkbox">
+                        <span class="toggle"></span>
+                        Always render as logo
+                    </label>
+
+                    <i class="fa-solid fa-crown crown"></i>
+
+                </div>
+
+            </section>
+
+
+            <!-- Right QR Section -->
+            <section class="qr-section">
+
+                
+
+                <div class="qr-box">
+                    <div id="qrcode"></div>
+                </div>
+
+
+
+                <!-- Buttons -->
+                <div class="qr-buttons">
+
+                    <button class="download-btn">
+                        <i class="fa-solid fa-download"></i>
+                        Download
+                    </button>
+
+                    <button>
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-palette"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-qrcode"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
